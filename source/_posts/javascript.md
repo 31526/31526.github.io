@@ -1,6 +1,14 @@
 title: javascript
 date: 2012-10-12 15:11:10
-tags:
+updated: 2012-12-25 15:22:33
+categories: 
+- javascript
+- nodejs
+tags: 
+- js
+- node
+- es6
+- grunt
 ---
 
 
