@@ -69,5 +69,5 @@ theme: next #landscape
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:31526/31526.github.io.git
+  repository: git@github.com:31526/31526.github.io.git
   branch: master
