@@ -533,8 +533,8 @@ td {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/foo-icomoon.eot?d28voc");
-  src: url("fonts/foo-icomoon.eot?d28voc#iefix") format('embedded-opentype'), url("fonts/foo-icomoon.ttf?d28voc") format('truetype'), url("fonts/foo-icomoon.woff?d28voc") format('woff'), url("fonts/foo-icomoon.svg?d28voc#icomoon") format('svg');
+  src: url("fonts/icomoon.eot?d28voc");
+  src: url("fonts/icomoon.eot?d28voc#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?d28voc") format('truetype'), url("fonts/icomoon.woff?d28voc") format('woff'), url("fonts/icomoon.svg?d28voc#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1110,7 +1110,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e07e41;
+  background: #ffe0b0;
 }
 .sidebar-nav {
   margin: 0;
