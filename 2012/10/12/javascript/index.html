@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Javascript, NodeJS, ES6" />
 
 
 
@@ -37,19 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="beijing-javascript-es6ES6MySQLdb is an thread-compatible interface to the popular MySQL database server that provides the Python database API.
-If you want to write applications which are portable acro">
+<meta name="description" content="你好，你了解一个英雄孤独的内心吗？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript-es6">
-<meta property="og:url" content="http://yoursite.com/2015/10/12/javascript-es6/index.html">
+<meta property="og:title" content="javascript">
+<meta property="og:url" content="http://yoursite.com/2012/10/12/javascript/index.html">
 <meta property="og:site_name" content="31526">
-<meta property="og:description" content="beijing-javascript-es6ES6MySQLdb is an thread-compatible interface to the popular MySQL database server that provides the Python database API.
-If you want to write applications which are portable acro">
-<meta property="og:updated_time" content="2015-10-12T07:07:48.000Z">
+<meta property="og:description" content="你好，你了解一个英雄孤独的内心吗？">
+<meta property="og:updated_time" content="2012-12-25T07:22:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript-es6">
-<meta name="twitter:description" content="beijing-javascript-es6ES6MySQLdb is an thread-compatible interface to the popular MySQL database server that provides the Python database API.
-If you want to write applications which are portable acro">
+<meta name="twitter:title" content="javascript">
+<meta name="twitter:description" content="你好，你了解一个英雄孤独的内心吗？">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +56,7 @@ If you want to write applications which are portable acro">
   };
 </script>
 
-  <title> javascript-es6 | 31526 </title>
+  <title> javascript | 31526 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -184,7 +181,7 @@ If you want to write applications which are portable acro">
           
           
             
-              javascript-es6
+              javascript
             
           
         </h1>
@@ -193,11 +190,38 @@ If you want to write applications which are portable acro">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-12T15:01:02+08:00" content="2015-10-12">
-            2015-10-12
+          <time itemprop="dateCreated" datetime="2012-10-12T15:11:10+08:00" content="2012-10-12">
+            2012-10-12
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/javascript/" itemprop="url" rel="index">
+                  <span itemprop="name">javascript</span>
+                </a>
+              </span>
+
+              
+              
+                ， 
+              
+
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/javascript/nodejs/" itemprop="url" rel="index">
+                  <span itemprop="name">nodejs</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
@@ -212,38 +236,48 @@ If you want to write applications which are portable acro">
       
 
       
-        <span itemprop="articleBody"><h1 id="beijing-javascript-es6">beijing-javascript-es6</h1><h2 id="ES6">ES6</h2><p>MySQLdb is an thread-compatible interface to the popular MySQL database server that provides the Python database API.</p>
-<p>If you want to write applications which are portable across databases, use MySQLdb, and avoid using this module directly. _mysql provides an interface which mostly implements the MySQL C API. For more information, see the MySQL documentation. The documentation for this module is intentionally weak because you probably should use the higher-level MySQLdb module. If you really need it, use the standard MySQL docs and transliterate as necessary.</p>
-<h2 id="ES5">ES5</h2><p>The simplest possible database connection is:</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import _mysql</span><br><span class="line">db=_mysql.connect()</span><br><span class="line">This creates a connection <span class="keyword">to</span> <span class="keyword">the</span> MySQL server <span class="property">running</span> <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> <span class="keyword">local</span> machine using <span class="keyword">the</span> standard UNIX socket (<span class="keyword">or</span> named pipe <span class="function_start"><span class="keyword">on</span></span> Windows), your login <span class="property">name</span> (<span class="keyword">from</span> <span class="keyword">the</span> USER environment variable), no password, <span class="keyword">and</span> <span class="keyword">does</span> <span class="keyword">not</span> USE a database. Chances are you need <span class="keyword">to</span> supply more information.:</span><br></pre></td></tr></table></figure>
-<p>db=_mysql.connect(“localhost”,”joebob”,”moonpie”,”thangs”)<br>This creates a connection to the MySQL server running on the local machine via a UNIX socket (or named pipe), the user name “joebob”, the password “moonpie”, and selects the initial database “thangs”.</p>
-<p>We haven’t even begun to touch upon all the parameters connect() can take. For this reason, I prefer to use keyword parameters:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">db</span>=_mysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"joebob"</span>,</span><br><span class="line">                  passwd=<span class="string">"moonpie"</span>,<span class="keyword">db</span>=<span class="string">"thangs"</span>)</span><br></pre></td></tr></table></figure>
-<p>This does exactly what the last example did, but is arguably easier to read. But since the default host is “localhost”, and if your login name really was “joebob”, you could shorten it to this:</p>
-<h3 id="dodolook">dodolook</h3><p>The MySQL C API has been wrapped in an object-oriented way. The only MySQL data structures which are implemented are the MYSQL (database connection handle) and MYSQL_RES (result handle) types. In general, any function which takes MYSQL <em>mysql as an argument is now a method of the connection object, and any function which takes MYSQL_RES </em>result as an argument is a method of the result object. Functions requiring none of the MySQL data structures are implemented as functions in the module. Functions requiring one of the other MySQL data structures are generally not implemented. Deprecated functions are not implemented. In all cases, the mysql_ prefix is dropped from the name. Most of the conn methods listed are also available as MySQLdb Connection object methods. Their use is non-portable.</p>
-<h3 id="welcome">welcome</h3><p>Integer constant stating the level of thread safety the interface supports. This is set to 1, which means: Threads may share the module.</p>
-<h4 id="COMMIT_or_ROLLBACK">COMMIT or ROLLBACK</h4><p>The MySQL protocol can not handle multiple threads using the same connection at once. Some earlier versions of MySQLdb utilized locking to achieve a threadsafety of 2. While this is not terribly hard to accomplish using the standard Cursor class (which uses mysql_store_result()), it is complicated by SSCursor (which uses mysql_use_result(); with the latter you must ensure all the rows have been read before another query can be executed. It is further complicated by the addition of transactions, since transactions start when a cursor execute a query, but end when COMMIT or ROLLBACK is executed by the Connection object. Two threads simply cannot share a connection while a transaction is in progress, in addition to not being able to share it during query execution. This excessively complicated the code to the point where it just isn’t worth it.</p>
-<h4 id="The_general_upshot_of_this_is:">The general upshot of this is:</h4><p>Don’t share connections between threads. It’s really not worth your effort or mine, and in the end, will probably hurt performance, since the MySQL server runs a separate thread for each connection. You can certainly do things like cache connections in a pool, and give those connections to one thread at a time. If you let two threads use a connection simultaneously, the MySQL client library will probably upchuck and die. You have been warned.</p>
-<p>For threaded applications, try using a connection pool. This can be done using the Pool module.</p>
-<h2 id="Objects_Connection_objects_are_returned_by_the_connect()_function-">Objects Connection objects are returned by the connect() function.</h2><p>commit()<br>If the database and the tables support transactions, this commits the current transaction; otherwise this method successfully does nothing.<br>rollback()<br>If the database and tables support transactions, this rolls back (cancels) the current transaction; otherwise a NotSupportedError is raised.<br>cursor([cursorclass])</p>
-<h3 id="MySQL_does_not_support_cursors;_however,">MySQL does not support cursors; however,</h3><p>cursors are easily emulated. You can supply an alternative cursor class as an optional parameter.</p>
-<h4 id="If_this_is_not_present,">If this is not present,</h4><p>it defaults to the value given when creating the connection object, or the standard Cursor class. Also see the additional supplied cursor classes in the usage section.</p>
-<h4 id="There_are_many_more_methods_defined_on_the_connection_object_which_are_MySQL-specific-_For_more_information_on_them,_consult_the_internal_documentation_using_pydoc-">There are many more methods defined on the connection object which are MySQL-specific. For more information on them, consult the internal documentation using pydoc.</h4></span>
+        <span itemprop="articleBody"><h1 id="Apache_Thrift_-_可伸缩的跨语言服务开发框架">Apache Thrift - 可伸缩的跨语言服务开发框架</h1><p>Apache Thrift 是 Facebook 实现的一种高效的、支持多种编程语言的远程服务调用的框架。本文将从 Java 开发人员角度详细介绍 Apache Thrift 的架构、开发和部署，并且针对不同的传输协议和服务类型给出相应的 Java 实例，同时详细介绍 Thrift 异步客户端的实现，最后提出使用 Thrift 需要注意的事项。</p>
+<a id="more"></a>
+<h2 id="前言：">前言：</h2><p>目前流行的服务调用方式有很多种，例如基于 SOAP 消息格式的 Web Service，基于 JSON 消息格式的 RESTful 服务等。其中所用到的数据传输方式包括 XML，JSON 等，然而 XML 相对体积太大，传输效率低，JSON 体积较小，新颖，但还不够完善。本文将介绍由 Facebook 开发的远程服务调用框架 Apache Thrift，它采用接口描述语言定义并创建服务，支持可扩展的跨语言服务开发，所包含的代码生成引擎可以在多种语言中，如 C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, Smalltalk 等创建高效的、无缝的服务，其传输数据采用二进制格式，相对 XML 和 JSON 体积更小，对于高并发、大数据量和多语言的环境更有优势。本文将详细介绍 Thrift 的使用，并且提供丰富的实例代码加以解释说明，帮助使用者快速构建服务。</p>
+<h3 id="一个简单的_Thrift_实例">一个简单的 Thrift 实例</h3><p>本文首先介绍一个简单的 Thrift 实现实例，使读者能够快速直观地了解什么是 Thrift 以及如何使用 Thrift 构建服务。<br>创建一个简单的服务 Hello。首先根据 Thrift 的语法规范编写脚本文件 Hello.thrift，代码如下：<br>清单 1. Hello.thrift</p>
+<figure class="highlight thrift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> java <span class="class"><span class="keyword">service</span>.<span class="title">demo</span> </span><br><span class="line">service Hello</span>&#123; </span><br><span class="line"> <span class="built_in">string</span> helloString(<span class="number">1</span>:<span class="built_in">string</span> para) </span><br><span class="line"> <span class="built_in">i32</span> helloInt(<span class="number">1</span>:<span class="built_in">i32</span> para) </span><br><span class="line"> <span class="built_in">bool</span> helloBoolean(<span class="number">1</span>:<span class="built_in">bool</span> para) </span><br><span class="line"> <span class="keyword">void</span> helloVoid() </span><br><span class="line"> <span class="built_in">string</span> helloNull() </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="javascript">javascript</h1><p>1 javascript javascript javascript</p>
+<h2 id="javascript-1">javascript</h2><p>2 javascript javascript javascript</p>
+<h3 id="javascript-2">javascript</h3><p>3 javascript javascript javascript</p>
+<h4 id="javascript-3">javascript</h4><p>4 javascript javascript javascript</p>
+<h5 id="javascript-4">javascript</h5><p>5 javascript javascript javascript</p>
+<h6 id="javascript-5">javascript</h6><p>6 javascript javascript javascript</p>
+<p>####### javascript<br>7 javascript javascript javascript</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/es6/" rel="tag">#es6</a>
+          
+            <a href="/tags/grunt/" rel="tag">#grunt</a>
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+            <a href="/tags/node/" rel="tag">#node</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2015/10/12/javascript-es6/" rel="prev">javascript-es6</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2012/10/12/javascript/" rel="next">javascript</a>
+              <a href="/2012/10/10/hello-world/" rel="next">Hello World</a>
             
           </div>
         </div>
@@ -347,7 +381,7 @@ If you want to write applications which are portable acro">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#beijing-javascript-es6"><span class="nav-number">1.</span> <span class="nav-text">beijing-javascript-es6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-number">1.1.</span> <span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES5"><span class="nav-number">1.2.</span> <span class="nav-text">ES5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dodolook"><span class="nav-number">1.2.1.</span> <span class="nav-text">dodolook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#welcome"><span class="nav-number">1.2.2.</span> <span class="nav-text">welcome</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#COMMIT_or_ROLLBACK"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">COMMIT or ROLLBACK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The_general_upshot_of_this_is:"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">The general upshot of this is:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objects_Connection_objects_are_returned_by_the_connect()_function-"><span class="nav-number">1.3.</span> <span class="nav-text">Objects Connection objects are returned by the connect() function.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL_does_not_support_cursors;_however,"><span class="nav-number">1.3.1.</span> <span class="nav-text">MySQL does not support cursors; however,</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#If_this_is_not_present,"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">If this is not present,</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#There_are_many_more_methods_defined_on_the_connection_object_which_are_MySQL-specific-_For_more_information_on_them,_consult_the_internal_documentation_using_pydoc-"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">There are many more methods defined on the connection object which are MySQL-specific. For more information on them, consult the internal documentation using pydoc.</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Apache_Thrift_-_可伸缩的跨语言服务开发框架"><span class="nav-number">1.</span> <span class="nav-text">Apache Thrift - 可伸缩的跨语言服务开发框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言："><span class="nav-number">1.1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的_Thrift_实例"><span class="nav-number">1.1.1.</span> <span class="nav-text">一个简单的 Thrift 实例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript"><span class="nav-number">2.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-1"><span class="nav-number">2.1.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#javascript-3"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#javascript-4"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#javascript-5"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">javascript</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
