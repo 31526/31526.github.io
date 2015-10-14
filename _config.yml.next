@@ -2,24 +2,25 @@
 menu:
   home: /
   categories: /categories
-  about: /about
   archives: /archives
   tags: /tags
+  photo: /photo
+  about: /about
   #commonweal: /404.html
-  #
-  #sitemap: /sitemap.xml
 
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
-avatar: https://avatars3.githubusercontent.com/u/15060784?v=3&s=400
-
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo,next"
+keywords: "31526, javascript, js, nodejs, node, py, python, mysql, nosql, mongodb, mongo, sql, bitcoin, btc"
+since: 2012
+
+
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+
+rss: /atom.xml #rss地址  默认即可
 
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
@@ -39,10 +40,6 @@ highlight_theme: normal
 mathjax:
 
 
-# Schemes
-#scheme: Mist
-
-
 # Sidebar, available value:
 #  - post    expand on posts automatically. Default.
 #  - always  expand for all pages automatically
@@ -51,13 +48,6 @@ sidebar: post
 #sidebar: always
 #sidebar: hide
 
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-
-# Automatically add list number to toc.
-toc_list_number: true
 
 # Automatically Excerpt
 auto_excerpt:
@@ -69,20 +59,31 @@ auto_excerpt:
 baidu_analytics: 3a937d7197bd2a72358b3762115a537a
 
 
-
 # Use Lato font
 # Note: this option is avialable only when the language is not `zh-Hans`
 language: zh-Hans
 use_font_lato: true
 
-# Make duoshuo show UA
-# user_id must NOT be null when admin_enable is true!
-# you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: ROOT
+# # Make duoshuo show UA
+# # user_id must NOT be null when admin_enable is true!
+# # you can visit http://dev.duoshuo.com get duoshuo user id.
+# duoshuo_info:
+#   ua_enable: true
+#   admin_enable: false
+#   user_id: 0
+#   #admin_nickname: ROOT
+
+
+
+# Schemes
+scheme: Mist
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically add list number to toc.
+toc_list_number: true
+
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -99,5 +100,6 @@ css: css
 js: js
 images: images
 
+
 # Theme version
-version: 0.4.5.1
+version: 0.4.2
