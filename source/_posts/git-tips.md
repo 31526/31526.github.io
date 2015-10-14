@@ -41,3 +41,38 @@ git pull aborted with error filename too long
 	git config core.longpaths true
 
 参考：<http://stackoverflow.com/questions/21123415/git-pull-aborted-with-error-filename-too-long>
+
+
+
+
+
+### 当出现 modified content in submodules 时的解决办法
+
+git 提交出现以下提示：
+
+	$ git status
+	On branch develop
+	Your branch is up-to-date with 'origin/develop'.
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+	  (commit or discard the untracked or modified content in submodules)
+
+	        modified:   themes/next (modified content)
+
+解决办法，新建 --.gitmodules--文件
+
+	echo "" >> .gitmodules
+
+在新建的.gitmodules文件内写入：
+
+	[submodule "themes/next"]
+		path = themes/next
+	    url = git://github.com/iissnan/hexo-theme-next.git
+	    ignore = dirty
+
+提示：url为子模块的git地址
+
+参考：http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
+
+
