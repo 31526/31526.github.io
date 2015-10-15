@@ -17,6 +17,23 @@
 
 > $content-desktop = 820px  // 修改成你期望的宽度
 
+
+#### themes/next 下的 .gitignore 文件备份
+
+> themes/next/.gitignore
+
+```
+.DS_Store
+.idea/
+*.log
+node_modules/
+
+# Ignore unused verdors' files
+source/vendors/fancybox/*
+!source/vendors/fancybox/source/
+```
+
+
 ## GitHub
 
 ### Github

@@ -1,6 +1,3 @@
-
-
-
 # when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
@@ -16,7 +13,6 @@ favicon: /favicon.ico
 # Set default keywords (Use a comma to separate)
 keywords: "31526, javascript, js, nodejs, node, py, python, mysql, nosql, mongodb, mongo, sql, bitcoin, btc"
 since: 2012
-
 
 
 # Set rss to false to disable feed link.
@@ -54,8 +50,8 @@ sidebar: post
 
 # Automatically Excerpt
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 200
 
 
 # 百度统计
