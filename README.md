@@ -18,6 +18,18 @@
 > $content-desktop = 820px  // 修改成你期望的宽度
 
 
+
+#### .gitmodules 文件
+
+```
+[submodule "themes/next"]
+	path = themes/next
+    url = git://github.com/iissnan/hexo-theme-next.git
+    ignore = dirty
+```
+
+
+
 #### themes/next 下的 .gitignore 文件备份
 
 > themes/next/.gitignore
