@@ -147,6 +147,14 @@ qiniu:
 
 
 
+# Admin
+admin:
+    name: admin
+    password: hao123123
+    secret: hey hexo
+    expire: 60*1
+    cors: http://localhost:4000
+
 
 
 # Creative Commons 4.0 International License.
