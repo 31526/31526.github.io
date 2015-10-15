@@ -1,8 +1,8 @@
 title: javascript-es6
 date: 2015-10-12 15:01:02
-tags: [js, apache, es6, 轮询]
-categories: [javascript, ECMASCript6]
-keywords: Javascript, NodeJS, ES6
+tags: [js, apache, es6]
+categories: [javascript]
+keywords: Javascript, NodeJS, ES6, ECMASCript6
 description: ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言
 ---
 

@@ -1,11 +1,15 @@
 title: Hello World
 date: 2012-10-10 15:01:02
+categories: [default]
+tags: [markdown, md]
+keywords: markdown, md
+description: 常用的markdown语法
 ---
-Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 
-### 七牛图片
-![](http://7xnift.com1.z0.glb.clouddn.com/openssl.jpg)
+
+## 七牛图片
+![](http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg-w400)
 
 
 <!-- more-->
@@ -13,36 +17,52 @@ Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documen
 
 
 ### 插入七牛图片
-![open ssl](http://7xnift.com1.z0.glb.clouddn.com/openssl.jpg)
 
-### Create a new post
+![open ssl](http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg)
 
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](http://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](http://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](http://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
 
 More info: [Deployment](http://hexo.io/docs/deployment.html)
+
+
+
+
+### 多部署
+
+```
+	deploy:
+		type: git
+		message: update  ##git message建议默认字段update 可以自定义
+		repo:
+		gitcafe: <repository url>,[branch] ##gitcafe 仓库地址和分支
+		github: <repository url>,[branch] ##github 仓库地址和分支
+
+	deploy:
+		type: git
+		messgae: "update"
+		repo:
+			github: git@github.com:31526/31526.github.io.git  master
+			gitcafe: git@gitcafe.com:31526/31526.git   gitcafe-pages
+
+
+
+	deploy:
+	type: git
+	#messgae: "update"
+	repository: git@gitcafe.com:31526/31526.git
+	branch: master
+
+	repository: git@github.com:31526/31526.github.io.git
+	branch: master
+
+
+
+
+
+	deploy:
+	type: git
+	repository: git@gitcafe.com:31526/31526.git
+	branch: gitcafe-pages
+
+
+```
+
