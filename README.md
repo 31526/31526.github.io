@@ -54,3 +54,27 @@ source/vendors/fancybox/*
 ## QiNiu七牛
 
 > https://github.com/gyk001/hexo-qiniu-sync
+
+
+
+
+### Coding备份Hexo博客代码和Next主题代码
+
+> 为避免github不稳定和方便在多台机器上写作，特在Coding备份Hexo博客代码和Next主题代码
+> git@git.coding.net:31526/31526.github.io.git
+
+#### 已有项目
+git remote add origin git@git.coding.net:31526/31526.github.io.git
+git push -u origin master
+
+
+
+#### 现有项目
+mkdir 31526.github.io
+cd 31526.github.io
+git init
+echo "# 31526.github.io" >> README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin git@git.coding.net:31526/31526.github.io.git
+git push -u origin master
