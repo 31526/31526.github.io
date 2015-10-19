@@ -15,6 +15,15 @@ git的一些常用操作
 
 <!--more-->
 
+
+### Git常用操作
+
+#### 放弃本地修改，强制更新为线上版本
+
+> git fetch --all
+> git reset --hard origin/master 
+
+
 ### Git ssh key 生成步骤
 
 参考：<http://git-scm.com/book/zh/ch4-3.html>
