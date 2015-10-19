@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Highcharts Map :: Timeline-trends-Map :: 时间轴动态数据图</title>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://7xnift.com1.z0.glb.clouddn.com/js/lib/highcharts/js/highcharts.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
+</head>
+
+<body>
+    <a href="http://cdn.hcharts.cn/highcharts/highcharts.js">highcharts</a>
+    <div id="box" style="min-width:700px;height:400px"></div>
+    <script type="text/javascript" src="http://7xnift.com1.z0.glb.clouddn.com/js/lib/require/require.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(document).ready(function() {
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+
+            var chart;
+            $('#box').highcharts({
+                chart: {
+                    type: 'spline',
+                    animation: Highcharts.svg, // don't animate in old IE               
+                    marginRight: 10,
+                    events: {
+                        load: function() {
+
+                            // set up the updating of the chart each second             
+                            var series = this.series[0];
+                            setInterval(function() {
+                                var x = (new Date()).getTime(), // current time         
+                                    y = Math.random();
+                                series.addPoint([x, y], true, true);
+                            }, 500);
+                        }
+                    }
+                },
+                title: {
+                    text: 'Live random data'
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickPixelInterval: 150
+                },
+                yAxis: {
+                    title: {
+                        text: 'Value'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 0.5,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    formatter: function() {
+                        return '<b>' + this.series.name + '</b><br/>' +
+                            Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                            Highcharts.numberFormat(this.y, 2);
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Random data',
+                    data: (function() {
+                        // generate an array of random data                             
+                        var data = [],
+                            time = (new Date()).getTime(),
+                            i;
+
+                        for (i = -99; i <= 0; i++) {
+                            data.push({
+                                x: time + i * 1000,
+                                y: Math.random()
+                            });
+                        }
+                        return data;
+                    })()
+                }]
+            });
+        });
+
+    });
+    </script>
+</body>
+
+</html>
