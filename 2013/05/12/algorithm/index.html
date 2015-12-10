@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="python, weixin, algorithm" />
+  <meta name="keywords" content="algorithm, quicksort, tools" />
 
 
 
@@ -39,16 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.2" />
 
 
-<meta name="description" content="Python微信红包算法 python-weixin-redenvelope">
+<meta name="description" content="algorithm,一些常用简单算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python微信红包算法 python-weixin-redenvelope-algorithm">
-<meta property="og:url" content="http://yoursite.com/2015/02/15/python-weixin-redenvelope/index.html">
+<meta property="og:title" content="一些常用简单算法">
+<meta property="og:url" content="http://yoursite.com/2013/05/12/algorithm/index.html">
 <meta property="og:site_name" content="31526">
-<meta property="og:description" content="Python微信红包算法 python-weixin-redenvelope">
-<meta property="og:updated_time" content="2015-10-15T10:05:51.000Z">
+<meta property="og:description" content="algorithm,一些常用简单算法">
+<meta property="og:updated_time" content="2013-05-15T14:28:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python微信红包算法 python-weixin-redenvelope-algorithm">
-<meta name="twitter:description" content="Python微信红包算法 python-weixin-redenvelope">
+<meta name="twitter:title" content="一些常用简单算法">
+<meta name="twitter:description" content="algorithm,一些常用简单算法">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +58,7 @@
   };
 </script>
 
-  <title> Python微信红包算法 python-weixin-redenvelope-algorithm | 31526 </title>
+  <title> 一些常用简单算法 | 31526 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -206,7 +206,7 @@
           
           
             
-              Python微信红包算法 python-weixin-redenvelope-algorithm
+              一些常用简单算法
             
           
         </h1>
@@ -215,8 +215,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-02-15T18:05:51+08:00" content="2015-02-15">
-            2015-02-15
+          <time itemprop="dateCreated" datetime="2013-05-12T22:28:10+08:00" content="2013-05-12">
+            2013-05-12
           </time>
         </span>
 
@@ -225,8 +225,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/python-algorithm/" itemprop="url" rel="index">
-                  <span itemprop="name">python, algorithm</span>
+                <a href="/categories/algorithm/" itemprop="url" rel="index">
+                  <span itemprop="name">algorithm</span>
                 </a>
               </span>
 
@@ -241,8 +241,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/02/15/python-weixin-redenvelope/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/15/python-weixin-redenvelope/" itemprop="commentsCount"></span>
+              <a href="/2013/05/12/algorithm/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2013/05/12/algorithm/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -256,11 +256,9 @@
       
 
       
-        <span itemprop="articleBody"><p>Python微信红包算法</p>
+        <span itemprop="articleBody"><p>一些常用简单算法-algorithm</p>
 <a id="more"></a>
-<h4 id="Python实现微信红包算法">Python实现微信红包算法</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">import <span class="built_in">random</span></span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">def randBonus(<span class="built_in">min</span>, <span class="built_in">max</span>, total,<span class="built_in">num</span>):</span><br><span class="line">    print <span class="built_in">min</span>, <span class="built_in">max</span>, total, <span class="built_in">num</span></span><br><span class="line">    <span class="comment">#print "&#123;:.2f&#125;".format(3.1415029)</span></span><br><span class="line">    total = float(total)</span><br><span class="line">    <span class="built_in">num</span> = int(<span class="built_in">num</span>)</span><br><span class="line">    <span class="built_in">min</span> = <span class="number">0.01</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">num</span> &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="constant">return</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">num</span> == <span class="number">1</span>:</span><br><span class="line">        print <span class="string">"第%d个人拿到红包数:%.2f"</span> % (<span class="built_in">num</span>,total)</span><br><span class="line">        <span class="constant">return</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    totalMoney = total</span><br><span class="line">    <span class="keyword">while</span>(i &lt; <span class="built_in">num</span>):</span><br><span class="line">        <span class="built_in">max</span> = totalMoney - <span class="built_in">min</span>*(<span class="built_in">num</span>- i)</span><br><span class="line">        k = int((<span class="built_in">num</span>-i)/<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">num</span> -i &lt;= <span class="number">2</span>:</span><br><span class="line">            k = <span class="built_in">num</span> -i</span><br><span class="line">        <span class="built_in">max</span> = <span class="built_in">max</span>/k</span><br><span class="line">        monney = <span class="built_in">random</span>.randint(int(<span class="built_in">min</span>*<span class="number">100</span>), int(<span class="built_in">max</span>*<span class="number">100</span>))</span><br><span class="line">        monney = float(monney)/<span class="number">100</span></span><br><span class="line">        totalMoney = totalMoney - monney</span><br><span class="line">        print <span class="string">"第%d个人拿到红包为:%.2f, 余额:%.2f"</span>%(i,monney,totalMoney)</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    print <span class="string">"第%d个人拿到红包为:%.2f, 余额:%.2f"</span>%(i,totalMoney,<span class="number">0.00</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="built_in">min</span> = sys.argv[<span class="number">1</span>]</span><br><span class="line">    <span class="built_in">max</span> = sys.argv[<span class="number">2</span>]</span><br><span class="line">    total = sys.argv[<span class="number">3</span>]</span><br><span class="line">    <span class="built_in">num</span> = sys.argv[<span class="number">4</span>]</span><br><span class="line">    randBonus(<span class="built_in">min</span>, <span class="built_in">max</span>, total, <span class="built_in">num</span>)</span><br></pre></td></tr></table></figure>
-<p>执行结果如下:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ python bonus.py <span class="number">0.01</span> <span class="number">10</span> <span class="number">20</span> <span class="number">10</span></span><br><span class="line"><span class="number">0.01</span> <span class="number">10</span> <span class="number">20</span> <span class="number">10</span></span><br><span class="line">第<span class="number">1</span>个人拿到红包为:<span class="number">0.18</span>, 余额:<span class="number">19.82</span></span><br><span class="line">第<span class="number">2</span>个人拿到红包为:<span class="number">2.05</span>, 余额:<span class="number">17.77</span></span><br><span class="line">第<span class="number">3</span>个人拿到红包为:<span class="number">5.27</span>, 余额:<span class="number">12.50</span></span><br><span class="line">第<span class="number">4</span>个人拿到红包为:<span class="number">0.90</span>, 余额:<span class="number">11.60</span></span><br><span class="line">第<span class="number">5</span>个人拿到红包为:<span class="number">0.35</span>, 余额:<span class="number">11.25</span></span><br><span class="line">第<span class="number">6</span>个人拿到红包为:<span class="number">1.77</span>, 余额:<span class="number">9.48</span></span><br><span class="line">第<span class="number">7</span>个人拿到红包为:<span class="number">2.31</span>, 余额:<span class="number">7.17</span></span><br><span class="line">第<span class="number">8</span>个人拿到红包为:<span class="number">0.75</span>, 余额:<span class="number">6.42</span></span><br><span class="line">第<span class="number">9</span>个人拿到红包为:<span class="number">6.24</span>, 余额:<span class="number">0.18</span></span><br><span class="line">第<span class="number">10</span>个人拿到红包为:<span class="number">0.18</span>, 余额:<span class="number">0.00</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// quicksort</span></span><br><span class="line"><span class="comment">// 快速排序算法</span></span><br><span class="line">(function()&#123;</span><br><span class="line">	var <span class="built_in">list</span> = [<span class="number">12</span>,<span class="number">5</span>,<span class="number">80</span>,<span class="number">27</span>,<span class="number">20</span>,<span class="number">99</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">55</span>,<span class="number">28</span>,<span class="number">77</span>];</span><br><span class="line"></span><br><span class="line">	<span class="function">function <span class="title">quicksort</span><span class="params">(arr, i, j)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">			var index = quicksortProcess(arr, i, j);</span><br><span class="line"></span><br><span class="line">			quicksort(arr, i, index);</span><br><span class="line">			quicksort(arr, index+<span class="number">1</span>, j)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function">function <span class="title">quicksortProcess</span><span class="params">(arr, i, j)</span></span>&#123;</span><br><span class="line">		var index = arr[i];</span><br><span class="line">		<span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; arr[j] &gt;= index)&#123;</span><br><span class="line">				j-=<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; arr[j] &lt; index)&#123;</span><br><span class="line">				arr[i] = arr[j];</span><br><span class="line">				i+=<span class="number">1</span></span><br><span class="line">				arr[j] = arr[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		arr[i] = index;</span><br><span class="line">		<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	quicksort(<span class="built_in">list</span>, <span class="number">0</span>, <span class="built_in">list</span>.length - <span class="number">1</span>);</span><br><span class="line">	console.<span class="built_in">log</span>( <span class="built_in">list</span> );</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -271,9 +269,7 @@
           
             <a href="/tags/algorithm/" rel="tag">#algorithm</a>
           
-            <a href="/tags/python/" rel="tag">#python</a>
-          
-            <a href="/tags/weixin/" rel="tag">#weixin</a>
+            <a href="/tags/quicksort/" rel="tag">#quicksort</a>
           
         </div>
       
@@ -282,13 +278,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/12/javascript-es6/" rel="prev">javascript-es6</a>
+              <a href="/2014/01/15/bitcoin-exchange/" rel="prev">bitcoin-exchange</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/02/12/hexo-qiniu-static/" rel="next">Hexo 使用七牛云做图床并存储静态资源</a>
+              <a href="/2012/12/12/python-library/" rel="next">常用的Python库分类收集</a>
             
           </div>
         </div>
@@ -313,8 +309,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/02/15/python-weixin-redenvelope/"
-                   data-title="Python微信红包算法 python-weixin-redenvelope-algorithm" data-url="http://yoursite.com/2015/02/15/python-weixin-redenvelope/">
+              <div class="ds-thread" data-thread-key="2013/05/12/algorithm/"
+                   data-title="一些常用简单算法" data-url="http://yoursite.com/2013/05/12/algorithm/">
               </div>
             
           </div>
@@ -443,7 +439,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Python实现微信红包算法"><span class="nav-number">1.</span> <span class="nav-text">Python实现微信红包算法</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

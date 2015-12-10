@@ -41,7 +41,7 @@ Query OK, <span class="number">0</span> rows affected (<span class="number">0.00
 <span class="comment">// 继续执行</span>
 launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span><span class="class">.mysql</span><span class="class">.plist</span>    
 </code></pre><p>至此，mysql随机启动就设置完成了。</p>
-<img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
+<h4 id="另外推荐_mysql数据库管理工具软件">另外推荐 mysql数据库管理工具软件</h4><img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
 <p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png" alt="图片说明显示在图片下面" title="鼠标移动图片上的标题"></p>
 <h3 id="比特币交易所">比特币交易所</h3><blockquote>
 <p>高频交易</p>
@@ -261,6 +261,29 @@ launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span
     <![CDATA[description]]>
     
     </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[一些常用简单算法]]></title>
+    <link href="http://yoursite.com/2013/05/12/algorithm/"/>
+    <id>http://yoursite.com/2013/05/12/algorithm/</id>
+    <published>2013-05-12T14:28:10.000Z</published>
+    <updated>2013-05-15T14:28:10.000Z</updated>
+    <content type="html"><![CDATA[<p>一些常用简单算法-algorithm</p>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// quicksort</span></span><br><span class="line"><span class="comment">// 快速排序算法</span></span><br><span class="line">(function()&#123;</span><br><span class="line">	var <span class="built_in">list</span> = [<span class="number">12</span>,<span class="number">5</span>,<span class="number">80</span>,<span class="number">27</span>,<span class="number">20</span>,<span class="number">99</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">55</span>,<span class="number">28</span>,<span class="number">77</span>];</span><br><span class="line"></span><br><span class="line">	<span class="function">function <span class="title">quicksort</span><span class="params">(arr, i, j)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">			var index = quicksortProcess(arr, i, j);</span><br><span class="line"></span><br><span class="line">			quicksort(arr, i, index);</span><br><span class="line">			quicksort(arr, index+<span class="number">1</span>, j)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function">function <span class="title">quicksortProcess</span><span class="params">(arr, i, j)</span></span>&#123;</span><br><span class="line">		var index = arr[i];</span><br><span class="line">		<span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; arr[j] &gt;= index)&#123;</span><br><span class="line">				j-=<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; arr[j] &lt; index)&#123;</span><br><span class="line">				arr[i] = arr[j];</span><br><span class="line">				i+=<span class="number">1</span></span><br><span class="line">				arr[j] = arr[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		arr[i] = index;</span><br><span class="line">		<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	quicksort(<span class="built_in">list</span>, <span class="number">0</span>, <span class="built_in">list</span>.length - <span class="number">1</span>);</span><br><span class="line">	console.<span class="built_in">log</span>( <span class="built_in">list</span> );</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[algorithm,一些常用简单算法]]>
+    
+    </summary>
+    
+      <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
+    
+      <category term="quicksort" scheme="http://yoursite.com/tags/quicksort/"/>
+    
+      <category term="algorithm" scheme="http://yoursite.com/categories/algorithm/"/>
     
   </entry>
   
