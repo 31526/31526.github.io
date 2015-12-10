@@ -21,12 +21,21 @@
     <published>2015-11-15T07:38:19.000Z</published>
     <updated>2015-11-17T09:38:19.000Z</updated>
     <content type="html"><![CDATA[<a id="more"></a>
-<h3 id="Mysql的安装和配置">Mysql的安装和配置</h3><pre><code><span class="keyword">brew </span>install mysql
+<h3 id="Mysql的安装和配置">Mysql的安装和配置</h3><h4 id="使用Homebrew安装mysql">使用Homebrew安装mysql</h4><p>使用Homebrew安装mysql数据库非常简单，只需要执行以下命令：</p>
+<pre><code><span class="keyword">brew </span>install mysql
 </code></pre><p>等安装成功后，启动mysql</p>
 <pre><code>mysql<span class="class">.server</span> start
-</code></pre><p>登录mysql，新安装得mysql是没有密码的</p>
-<pre><code><span class="title">mysql</span> -uroot -p
-</code></pre><p>设置Mac开机自动启动，执行一下命令:(其中5.7.9是我的mysql版本号)</p>
+</code></pre><p>登录mysql，新安装得mysql是没有密码的, 可以直接输入mysql进入</p>
+<pre><code>&gt;mysql
+</code></pre><p>然后通过set password命令修改root账户密码</p>
+<p>首先要进入 mysql，并使用 mysql库，命令 “use mysql;”</p>
+<pre><code>mysql&gt;<span class="keyword">use</span> mysql
+mysql&gt;<span class="keyword">set</span> password <span class="keyword">for</span> <span class="string">'root'</span>@<span class="string">'localhost'</span>=password(<span class="string">'你的密码'</span>);
+Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)
+</code></pre><p>然后运行如下命令：</p>
+<pre><code><span class="title">mysql</span> -u root -p
+</code></pre><p>输入刚刚设置的密码，即可进入mysql。</p>
+<h4 id="设置mysql随mac开机启动">设置mysql随mac开机启动</h4><p>设置Mac开机自动启动，执行一下命令:(其中5.7.9是我的mysql版本号)</p>
 <pre><code>cp /usr/local/Cellar/mysql/<span class="number">5.7</span>.<span class="number">9</span>/homebrew<span class="class">.mxcl</span><span class="class">.mysql</span><span class="class">.plist</span> ~/Library/LaunchAgents
 
 <span class="comment">// 继续执行</span>
@@ -64,8 +73,9 @@ launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span
     <link href="http://yoursite.com/2015/10/14/hexo-develop/"/>
     <id>http://yoursite.com/2015/10/14/hexo-develop/</id>
     <published>2015-10-14T03:14:21.000Z</published>
-    <updated>2015-10-19T06:04:54.000Z</updated>
+    <updated>2015-12-10T08:05:05.000Z</updated>
     <content type="html"><![CDATA[<p>hexo备注</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo现在支持更加简单的命令格式了，比如：</span><br><span class="line">hexo <span class="keyword">g</span> == hexo <span class="keyword">generate</span></span><br><span class="line">hexo <span class="keyword">d</span> == hexo deploy</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo <span class="keyword">n</span> == hexo new</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">g</span> <span class="keyword">d</span> <span class="comment">//即可编译部署了</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="Next主题">Next主题</h3><pre><code>http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span>
 </code></pre><h4 id="独立居中的引用">独立居中的引用</h4><blockquote>
@@ -92,7 +102,8 @@ launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span
 </code></pre><h3 id="多部署">多部署</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	message: update  #<span class="id">#git</span> message建议默认字段update 可以自定义</span><br><span class="line">	repo:</span><br><span class="line">	gitcafe: &lt;repository url&gt;,[branch] #<span class="id">#gitcafe</span> 仓库地址和分支</span><br><span class="line">	github: &lt;repository url&gt;,[branch] #<span class="id">#github</span> 仓库地址和分支</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	messgae: <span class="string">"update"</span></span><br><span class="line">	repo:</span><br><span class="line">		github: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>  master</span><br><span class="line">		gitcafe: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span>   gitcafe-pages</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line"><span class="id">#messgae</span>: <span class="string">"update"</span></span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line">repository: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: gitcafe-pages</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>hexo备注</p>]]>
+    <![CDATA[<p>hexo备注</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo现在支持更加简单的命令格式了，比如：</span><br><span class="line">hexo <span class="keyword">g</span> == hexo <span class="keyword">generate</span></span><br><span class="line">hexo <span class="keyword">d</span> == hexo deploy</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo <span class="keyword">n</span> == hexo new</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">g</span> <span class="keyword">d</span> <span class="comment">//即可编译部署了</span></span><br></pre></td></tr></table></figure>]]>
     
     </summary>
     
