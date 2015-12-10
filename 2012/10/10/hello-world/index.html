@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion ">
+<html class="theme-next use-motion theme-next-mist">
 <head>
   
 
@@ -23,38 +23,39 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.2"/>
 
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="markdown, md" />
 
 
 
+  <link rel="alternate" href="/atom.xml" title="31526" type="application/atom+xml" />
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.2" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="常用的markdown语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2012/10/10/hello-world/index.html">
 <meta property="og:site_name" content="31526">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-10-12T07:01:22.000Z">
+<meta property="og:description" content="常用的markdown语法">
+<meta property="og:image" content="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg-w400">
+<meta property="og:image" content="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg">
+<meta property="og:updated_time" content="2015-10-19T06:04:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:description" content="常用的markdown语法">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
+    scheme: 'Mist',
     sidebar: 'post'
   };
 </script>
@@ -114,7 +115,7 @@ Quick">
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
@@ -129,14 +130,6 @@ Quick">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br />
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            关于
           </a>
         </li>
       
@@ -157,10 +150,10 @@ Quick">
         </li>
       
         
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            <i class="menu-item-icon icon-next-sitemap"></i> <br />
-            Sitemap
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
           </a>
         </li>
       
@@ -171,6 +164,29 @@ Quick">
   
 
   
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'p3PDwVtc34s7Cawy_enq','2.0.0');
+</script>
+
+
+
+    </div>
+  
+
+
 </nav>
 
  </div>
@@ -207,8 +223,30 @@ Quick">
         </span>
 
         
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/default/" itemprop="url" rel="index">
+                  <span itemprop="name">default</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
 
         
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2012/10/10/hello-world/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2012/10/10/hello-world/" itemprop="commentsCount"></span>
+              </a>
+            </span>
           
         
       </div>
@@ -220,20 +258,24 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h2 id="七牛图片">七牛图片</h2><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg-w400" alt=""></p>
+<a id="more"></a>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="插入七牛图片">插入七牛图片</h3><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg" alt="open ssl"></p>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="多部署">多部署</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	message: update  #<span class="id">#git</span> message建议默认字段update 可以自定义</span><br><span class="line">	repo:</span><br><span class="line">	gitcafe: &lt;repository url&gt;,[branch] #<span class="id">#gitcafe</span> 仓库地址和分支</span><br><span class="line">	github: &lt;repository url&gt;,[branch] #<span class="id">#github</span> 仓库地址和分支</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	messgae: <span class="string">"update"</span></span><br><span class="line">	repo:</span><br><span class="line">		github: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>  master</span><br><span class="line">		gitcafe: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span>   gitcafe-pages</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line"><span class="id">#messgae</span>: <span class="string">"update"</span></span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line">repository: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: gitcafe-pages</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
+          
+            <a href="/tags/md/" rel="tag">#md</a>
+          
+        </div>
       
 
       
@@ -269,6 +311,10 @@ Quick">
         
           <div class="comments" id="comments">
             
+              <div class="ds-thread" data-thread-key="2012/10/10/hello-world/"
+                   data-title="Hello World" data-url="http://yoursite.com/2012/10/10/hello-world/">
+              </div>
+            
           </div>
         
       </div>
@@ -299,28 +345,28 @@ Quick">
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://avatars3.githubusercontent.com/u/15060784?v=3&s=400" alt="31526" itemprop="image"/>
+          <img class="site-author-image" src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/github-io-avarar.jpg" alt="31526" itemprop="image"/>
           <p class="site-author-name" itemprop="name">31526</p>
         </div>
         <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -328,12 +374,59 @@ Quick">
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://31526.github.io" target="_blank">GitBlog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://31526.gitcafe.io" target="_blank">CafeBlog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/31526" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://gitcafe.com/31526" target="_blank">GitCafe</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/31526" target="_blank">Twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/31526" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/31526" target="_blank">DouBan</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/31526" target="_blank">ZhiHu</a>
+              </span>
+            
           
         </div>
 
         
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -348,7 +441,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#七牛图片"><span class="nav-number">1.</span> <span class="nav-text">七牛图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">2.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入七牛图片"><span class="nav-number">2.1.</span> <span class="nav-text">插入七牛图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多部署"><span class="nav-number">2.2.</span> <span class="nav-text">多部署</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -364,7 +457,7 @@ Quick">
     <footer id="footer" class="footer">
       <div class="footer-inner"> <div class="copyright" >
   
-  &copy; &nbsp; 
+  &copy; &nbsp;  2012 - 
   <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
@@ -372,16 +465,31 @@ Quick">
   <span class="author" itemprop="copyrightHolder">31526</span>
 </div>
 
+
+<div class="powered-by">
+  <a class="theme-link" href="/sitemap.xml">Sitemap</a>
+</div>
+
+
+<div class="powered-by">
+  <a class="theme-link" href="/atom.xml">RSS</a>
+</div>
+
+
+
 <div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
+
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
+
+
 
 
  </div>
@@ -396,34 +504,47 @@ Quick">
   
   
     
-    
 
   
+    
+  
 
-
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"31526"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+    
   
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.2"></script>
   
 
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.2" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.2" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -608,5 +729,10 @@ Quick">
       });
     });
   </script>
+
+
+
+<a href="https://github.com/31526"><img style="position: absolute; top: 0; left: 0; border: 0; display:none;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
 </body>
 </html>

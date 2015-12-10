@@ -2,8 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/11/15/homebrew/</loc>
+    <lastmod>2015-11-17T09:38:19.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2012/12/12/python-library/</loc>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/demo/index.html</loc>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/10/12/javascript-es6/</loc>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/10/14/hexo-develop/</loc>
-    <lastmod>2015-10-14T03:14:21.000Z</lastmod>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2012/10/10/hello-world/</loc>
+    <lastmod>2015-10-19T06:04:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/02/15/python-weixin-redenvelope/</loc>
+    <lastmod>2015-10-15T10:05:51.000Z</lastmod>
   </url>
   
   <url>
@@ -17,23 +52,28 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/10/12/javascript-es6/</loc>
-    <lastmod>2015-10-12T10:05:29.000Z</lastmod>
+    <loc>http://yoursite.com/2014/02/12/hexo-qiniu-static/</loc>
+    <lastmod>2014-02-12T14:28:10.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    <lastmod>2015-10-12T07:10:39.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2012/10/10/hello-world/</loc>
-    <lastmod>2015-10-12T07:01:22.000Z</lastmod>
+    <loc>http://yoursite.com/2014/01/15/bitcoin-exchange/</loc>
+    <lastmod>2014-01-15T09:38:19.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/2012/10/12/javascript/</loc>
     <lastmod>2012-12-25T07:22:33.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2012/11/12/git-tips/</loc>
+    <lastmod>2012-11-12T14:28:10.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2012/10/15/markdown/</loc>
+    <lastmod>2012-10-15T09:01:15.000Z</lastmod>
   </url>
   
 </urlset>

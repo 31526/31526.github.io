@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[31526]]></title>
+  <subtitle><![CDATA[javascript es6]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-11-17T09:38:19.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[31526]]></name>
+    <email><![CDATA[31526@qq.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[homebrew]]></title>
+    <link href="http://yoursite.com/2015/11/15/homebrew/"/>
+    <id>http://yoursite.com/2015/11/15/homebrew/</id>
+    <published>2015-11-15T07:38:19.000Z</published>
+    <updated>2015-11-17T09:38:19.000Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+<h3 id="Mysql的安装和配置">Mysql的安装和配置</h3><pre><code><span class="keyword">brew </span>install mysql
+</code></pre><p>等安装成功后，启动mysql<br>    mysql.server start</p>
+<p>登录mysql，新安装得mysql是没有密码的<br>    mysql -uroot -p</p>
+<p>设置Mac开机自动启动，执行一下命令:(其中5.7.9是我的mysql版本号)<br>    cp /usr/local/Cellar/mysql/5.7.9/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents</p>
+<pre><code><span class="comment">// 继续执行</span>
+launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span><span class="class">.mysql</span><span class="class">.plist</span>    
+</code></pre><p>至此，mysql随机启动就设置完成了。</p>
+<img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png" alt="图片说明显示在图片下面" title="鼠标移动图片上的标题"></p>
+<h3 id="比特币交易所">比特币交易所</h3><blockquote>
+<p>高频交易</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[mac下homebrew的安装以及 homebrew系列开发软件的安装]]>
+    
+    </summary>
+    
+      <category term="homebrew" scheme="http://yoursite.com/tags/homebrew/"/>
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="mongodb" scheme="http://yoursite.com/tags/mongodb/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo-develop]]></title>
+    <link href="http://yoursite.com/2015/10/14/hexo-develop/"/>
+    <id>http://yoursite.com/2015/10/14/hexo-develop/</id>
+    <published>2015-10-14T03:14:21.000Z</published>
+    <updated>2015-10-19T06:04:54.000Z</updated>
+    <content type="html"><![CDATA[<p>hexo备注</p>
+<a id="more"></a>
+<h3 id="Next主题">Next主题</h3><pre><code>http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span>
+</code></pre><h4 id="独立居中的引用">独立居中的引用</h4><blockquote>
+<p>带上下分割线的引用，引用内文本将自动居中。适用于单行引用文本的场景。</p>
+</blockquote>
+<p><img src="http://iissnan.com/nexus/next/blockquote-center.png" alt=""></p>
+<pre><code><span class="comment">&lt;!-- HTML --&gt;</span>
+<span class="tag">&lt;<span class="title">blockquote</span> <span class="attribute">class</span>=<span class="value">"blockquote-center"</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="title">blockquote</span>&gt;</span>
+
+<span class="comment">&lt;!-- Built-in tag (Require NexT 0.4.5 or above) --&gt;</span>
+<span class="comment"><blockquote class="blockquote-center"><p>blah blah blah</p>
+</blockquote></span>
+</code></pre><h4 id="图片将自动扩展_26%，突破文章宽度。">图片将自动扩展 26%，突破文章宽度。</h4><p><img src="http://iissnan.com/nexus/next/full-image.png" alt=""></p>
+<pre><code><span class="comment">&lt;!-- HTML --&gt;</span>
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"/image-url"</span> <span class="attribute">class</span>=<span class="value">"full-image"</span> /&gt;</span>
+
+<span class="comment">&lt;!-- Built-in tag (Require NexT 0.4.5 or above) --&gt;</span>
+<span class="comment"><img src="/image-url" class="full-image" alt="alt" title="title"></span>
+</code></pre><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg" alt=""></p>
+<h4 id="自定义页面内容区域的宽度">自定义页面内容区域的宽度</h4><blockquote>
+<p>编辑主题的 <strong>source/css/_variables/custom.styl</strong> 文件，新增变量：</p>
+</blockquote>
+<pre><code><span class="variable">$content-desktop</span> = <span class="number">700</span>px  // 修改成你期望的宽度
+</code></pre><h3 id="多部署">多部署</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	message: update  #<span class="id">#git</span> message建议默认字段update 可以自定义</span><br><span class="line">	repo:</span><br><span class="line">	gitcafe: &lt;repository url&gt;,[branch] #<span class="id">#gitcafe</span> 仓库地址和分支</span><br><span class="line">	github: &lt;repository url&gt;,[branch] #<span class="id">#github</span> 仓库地址和分支</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	messgae: <span class="string">"update"</span></span><br><span class="line">	repo:</span><br><span class="line">		github: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>  master</span><br><span class="line">		gitcafe: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span>   gitcafe-pages</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line"><span class="id">#messgae</span>: <span class="string">"update"</span></span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line">repository: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: gitcafe-pages</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>hexo备注</p>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[javascript-es6]]></title>
+    <link href="http://yoursite.com/2015/10/12/javascript-es6/"/>
+    <id>http://yoursite.com/2015/10/12/javascript-es6/</id>
+    <published>2015-10-12T07:01:02.000Z</published>
+    <updated>2015-10-19T06:04:54.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="本书力争覆盖ES6与ES5的所有不同之处，对涉及的语法知识给予详细介绍，并给出大量简洁易懂的示例代码。">本书力争覆盖ES6与ES5的所有不同之处，对涉及的语法知识给予详细介绍，并给出大量简洁易懂的示例代码。</h1><p>本书为中级难度，适合已有一定JavaScript语言基础的读者，用来了解这门语言的最新发展；也可当作参考手册，查寻新增的语法点。</p>
+<p>全书第一版已由电子工业出版社于2014年10月出版（版权页，内页1，内页2），铜版纸全彩印刷，附有索引。目前，网站的内容是第二版的初稿，预订2016年年初出版。感谢张春雨编辑支持我将全书开源的做法。如果您对本书感兴趣，建议考虑购买纸版。这样可以使出版社不因出版开源书籍而亏钱，进而鼓励更多的作者开源自己的书籍。</p>
+<a id="more"></a>
+<h1 id="beijing-javascript-es6">beijing-javascript-es6</h1><h2 id="ES6">ES6</h2><p>MySQLdb is an thread-compatible interface to the popular MySQL database server that provides the Python database API.</p>
+<p>If you want to write applications which are portable across databases, use MySQLdb, and avoid using this module directly. _mysql provides an interface which mostly implements the MySQL C API. For more information, see the MySQL documentation. The documentation for this module is intentionally weak because you probably should use the higher-level MySQLdb module. If you really need it, use the standard MySQL docs and transliterate as necessary.</p>
+<h2 id="ES5">ES5</h2><p>The simplest possible database connection is:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import _mysql</span><br><span class="line">db=_mysql.connect()</span><br><span class="line">This creates a connection <span class="keyword">to</span> <span class="keyword">the</span> MySQL server <span class="property">running</span> <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> <span class="keyword">local</span> machine using <span class="keyword">the</span> standard UNIX socket (<span class="keyword">or</span> named pipe <span class="function_start"><span class="keyword">on</span></span> Windows), your login <span class="property">name</span> (<span class="keyword">from</span> <span class="keyword">the</span> USER environment variable), no password, <span class="keyword">and</span> <span class="keyword">does</span> <span class="keyword">not</span> USE a database. Chances are you need <span class="keyword">to</span> supply more information.:</span><br></pre></td></tr></table></figure>
+<p>db=_mysql.connect(“localhost”,”joebob”,”moonpie”,”thangs”)<br>This creates a connection to the MySQL server running on the local machine via a UNIX socket (or named pipe), the user name “joebob”, the password “moonpie”, and selects the initial database “thangs”.</p>
+<p>We haven’t even begun to touch upon all the parameters connect() can take. For this reason, I prefer to use keyword parameters:</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">db</span>=_mysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"joebob"</span>,</span><br><span class="line">                  passwd=<span class="string">"moonpie"</span>,<span class="keyword">db</span>=<span class="string">"thangs"</span>)</span><br></pre></td></tr></table></figure>
+<p>This does exactly what the last example did, but is arguably easier to read. But since the default host is “localhost”, and if your login name really was “joebob”, you could shorten it to this:</p>
+<h3 id="dodolook">dodolook</h3><p>The MySQL C API has been wrapped in an object-oriented way. The only MySQL data structures which are implemented are the MYSQL (database connection handle) and MYSQL_RES (result handle) types. In general, any function which takes MYSQL <em>mysql as an argument is now a method of the connection object, and any function which takes MYSQL_RES </em>result as an argument is a method of the result object. Functions requiring none of the MySQL data structures are implemented as functions in the module. Functions requiring one of the other MySQL data structures are generally not implemented. Deprecated functions are not implemented. In all cases, the mysql_ prefix is dropped from the name. Most of the conn methods listed are also available as MySQLdb Connection object methods. Their use is non-portable.</p>
+<h3 id="welcome">welcome</h3><p>Integer constant stating the level of thread safety the interface supports. This is set to 1, which means: Threads may share the module.</p>
+<h4 id="COMMIT_or_ROLLBACK">COMMIT or ROLLBACK</h4><p>The MySQL protocol can not handle multiple threads using the same connection at once. Some earlier versions of MySQLdb utilized locking to achieve a threadsafety of 2. While this is not terribly hard to accomplish using the standard Cursor class (which uses mysql_store_result()), it is complicated by SSCursor (which uses mysql_use_result(); with the latter you must ensure all the rows have been read before another query can be executed. It is further complicated by the addition of transactions, since transactions start when a cursor execute a query, but end when COMMIT or ROLLBACK is executed by the Connection object. Two threads simply cannot share a connection while a transaction is in progress, in addition to not being able to share it during query execution. This excessively complicated the code to the point where it just isn’t worth it.</p>
+<h4 id="The_general_upshot_of_this_is:">The general upshot of this is:</h4><p>Don’t share connections between threads. It’s really not worth your effort or mine, and in the end, will probably hurt performance, since the MySQL server runs a separate thread for each connection. You can certainly do things like cache connections in a pool, and give those connections to one thread at a time. If you let two threads use a connection simultaneously, the MySQL client library will probably upchuck and die. You have been warned.</p>
+<p>For threaded applications, try using a connection pool. This can be done using the Pool module.</p>
+<h2 id="Objects_Connection_objects_are_returned_by_the_connect()_function-">Objects Connection objects are returned by the connect() function.</h2><p>commit()<br>If the database and the tables support transactions, this commits the current transaction; otherwise this method successfully does nothing.<br>rollback()<br>If the database and tables support transactions, this rolls back (cancels) the current transaction; otherwise a NotSupportedError is raised.<br>cursor([cursorclass])</p>
+<h3 id="MySQL_does_not_support_cursors;_however,">MySQL does not support cursors; however,</h3><p>cursors are easily emulated. You can supply an alternative cursor class as an optional parameter.</p>
+<h4 id="If_this_is_not_present,">If this is not present,</h4><p>it defaults to the value given when creating the connection object, or the standard Cursor class. Also see the additional supplied cursor classes in the usage section.</p>
+<h4 id="There_are_many_more_methods_defined_on_the_connection_object_which_are_MySQL-specific-_For_more_information_on_them,_consult_the_internal_documentation_using_pydoc-">There are many more methods defined on the connection object which are MySQL-specific. For more information on them, consult the internal documentation using pydoc.</h4>]]></content>
+    <summary type="html">
+    <![CDATA[ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言]]>
+    
+    </summary>
+    
+      <category term="apache" scheme="http://yoursite.com/tags/apache/"/>
+    
+      <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Python微信红包算法 python-weixin-redenvelope-algorithm]]></title>
+    <link href="http://yoursite.com/2015/02/15/python-weixin-redenvelope/"/>
+    <id>http://yoursite.com/2015/02/15/python-weixin-redenvelope/</id>
+    <published>2015-02-15T10:05:51.000Z</published>
+    <updated>2015-10-15T10:05:51.000Z</updated>
+    <content type="html"><![CDATA[<p>Python微信红包算法</p>
+<a id="more"></a>
+<h4 id="Python实现微信红包算法">Python实现微信红包算法</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">import <span class="built_in">random</span></span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">def randBonus(<span class="built_in">min</span>, <span class="built_in">max</span>, total,<span class="built_in">num</span>):</span><br><span class="line">    print <span class="built_in">min</span>, <span class="built_in">max</span>, total, <span class="built_in">num</span></span><br><span class="line">    <span class="comment">#print "&#123;:.2f&#125;".format(3.1415029)</span></span><br><span class="line">    total = float(total)</span><br><span class="line">    <span class="built_in">num</span> = int(<span class="built_in">num</span>)</span><br><span class="line">    <span class="built_in">min</span> = <span class="number">0.01</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">num</span> &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="constant">return</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">num</span> == <span class="number">1</span>:</span><br><span class="line">        print <span class="string">"第%d个人拿到红包数:%.2f"</span> % (<span class="built_in">num</span>,total)</span><br><span class="line">        <span class="constant">return</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    totalMoney = total</span><br><span class="line">    <span class="keyword">while</span>(i &lt; <span class="built_in">num</span>):</span><br><span class="line">        <span class="built_in">max</span> = totalMoney - <span class="built_in">min</span>*(<span class="built_in">num</span>- i)</span><br><span class="line">        k = int((<span class="built_in">num</span>-i)/<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">num</span> -i &lt;= <span class="number">2</span>:</span><br><span class="line">            k = <span class="built_in">num</span> -i</span><br><span class="line">        <span class="built_in">max</span> = <span class="built_in">max</span>/k</span><br><span class="line">        monney = <span class="built_in">random</span>.randint(int(<span class="built_in">min</span>*<span class="number">100</span>), int(<span class="built_in">max</span>*<span class="number">100</span>))</span><br><span class="line">        monney = float(monney)/<span class="number">100</span></span><br><span class="line">        totalMoney = totalMoney - monney</span><br><span class="line">        print <span class="string">"第%d个人拿到红包为:%.2f, 余额:%.2f"</span>%(i,monney,totalMoney)</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    print <span class="string">"第%d个人拿到红包为:%.2f, 余额:%.2f"</span>%(i,totalMoney,<span class="number">0.00</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="built_in">min</span> = sys.argv[<span class="number">1</span>]</span><br><span class="line">    <span class="built_in">max</span> = sys.argv[<span class="number">2</span>]</span><br><span class="line">    total = sys.argv[<span class="number">3</span>]</span><br><span class="line">    <span class="built_in">num</span> = sys.argv[<span class="number">4</span>]</span><br><span class="line">    randBonus(<span class="built_in">min</span>, <span class="built_in">max</span>, total, <span class="built_in">num</span>)</span><br></pre></td></tr></table></figure>
+<p>执行结果如下:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ python bonus.py <span class="number">0.01</span> <span class="number">10</span> <span class="number">20</span> <span class="number">10</span></span><br><span class="line"><span class="number">0.01</span> <span class="number">10</span> <span class="number">20</span> <span class="number">10</span></span><br><span class="line">第<span class="number">1</span>个人拿到红包为:<span class="number">0.18</span>, 余额:<span class="number">19.82</span></span><br><span class="line">第<span class="number">2</span>个人拿到红包为:<span class="number">2.05</span>, 余额:<span class="number">17.77</span></span><br><span class="line">第<span class="number">3</span>个人拿到红包为:<span class="number">5.27</span>, 余额:<span class="number">12.50</span></span><br><span class="line">第<span class="number">4</span>个人拿到红包为:<span class="number">0.90</span>, 余额:<span class="number">11.60</span></span><br><span class="line">第<span class="number">5</span>个人拿到红包为:<span class="number">0.35</span>, 余额:<span class="number">11.25</span></span><br><span class="line">第<span class="number">6</span>个人拿到红包为:<span class="number">1.77</span>, 余额:<span class="number">9.48</span></span><br><span class="line">第<span class="number">7</span>个人拿到红包为:<span class="number">2.31</span>, 余额:<span class="number">7.17</span></span><br><span class="line">第<span class="number">8</span>个人拿到红包为:<span class="number">0.75</span>, 余额:<span class="number">6.42</span></span><br><span class="line">第<span class="number">9</span>个人拿到红包为:<span class="number">6.24</span>, 余额:<span class="number">0.18</span></span><br><span class="line">第<span class="number">10</span>个人拿到红包为:<span class="number">0.18</span>, 余额:<span class="number">0.00</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[Python微信红包算法 python-weixin-redenvelope]]>
+    
+    </summary>
+    
+      <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="weixin" scheme="http://yoursite.com/tags/weixin/"/>
+    
+      <category term="python, algorithm" scheme="http://yoursite.com/categories/python-algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo 使用七牛云做图床并存储静态资源]]></title>
+    <link href="http://yoursite.com/2014/02/12/hexo-qiniu-static/"/>
+    <id>http://yoursite.com/2014/02/12/hexo-qiniu-static/</id>
+    <published>2014-02-12T14:28:10.000Z</published>
+    <updated>2014-02-12T14:28:10.000Z</updated>
+    <content type="html"><![CDATA[<p>Hexo 使用七牛云做图床并存储静态资源</p>
+<a id="more"></a>
+<h3 id="七牛云存储插件">七牛云存储插件</h3><blockquote>
+<p><a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external">https://github.com/gyk001/hexo-qiniu-sync</a></p>
+</blockquote>
+<h4 id="同步上传命令行">同步上传命令行</h4><blockquote>
+<p>hexo qiniu i # 功能：显示插件版本，作者及Github地址信息等<br>hexo qiniu s # 功能：同步静态资源到七牛空间<br>hexo qiniu s2 # 功能：同步静态资源到七牛空间，且会同步上传那些本地与七牛空间有差异的文件。</p>
+</blockquote>
+<h4 id="配置">配置</h4><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#七牛云存储设置</span></span><br><span class="line"><span class="preprocessor">##域名 7xnift.com1.z0.glb.clouddn.com</span></span><br><span class="line"><span class="preprocessor">##offline       是否离线. 离线状态将使用本地地址渲染</span></span><br><span class="line"><span class="preprocessor">##sync          是否同步</span></span><br><span class="line"><span class="preprocessor">##bucket        空间名称.</span></span><br><span class="line"><span class="preprocessor">##access_key    上传密钥AccessKey</span></span><br><span class="line"><span class="preprocessor">##secret_key    上传密钥SecretKey</span></span><br><span class="line"><span class="preprocessor">##dirPrefix     上传的资源子目录前缀.如设置，需与urlPrefix同步</span></span><br><span class="line"><span class="preprocessor">##urlPrefix     外链前缀.</span></span><br><span class="line"><span class="preprocessor">##local_dir     本地目录.</span></span><br><span class="line"><span class="preprocessor">##update_exist  是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span></span><br><span class="line"><span class="preprocessor">##image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动</span></span><br><span class="line"><span class="preprocessor">##image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http://developer.qiniu.com/docs/v6/api/reference/fop/img/</span></span><br><span class="line"><span class="preprocessor">##              可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即生成宽度最多500px的缩略图</span></span><br><span class="line">qiniu:</span><br><span class="line">  offline: <span class="literal">false</span></span><br><span class="line">  sync: <span class="literal">true</span></span><br><span class="line">  bucket: github</span><br><span class="line">  access_key: access_key</span><br><span class="line">  secret_key: secret_key</span><br><span class="line">  dirPrefix:</span><br><span class="line">  urlPrefix: http:<span class="comment">//7xnift.com1.z0.glb.clouddn.com</span></span><br><span class="line">  local_dir: <span class="keyword">static</span></span><br><span class="line">  update_exist: <span class="literal">true</span></span><br><span class="line">  img:</span><br><span class="line">    folder: img</span><br><span class="line">    extend:</span><br><span class="line">  js:</span><br><span class="line">    folder: js</span><br><span class="line">  css:</span><br><span class="line">    folder: css</span><br><span class="line">  up:</span><br><span class="line">  	folder: upload</span><br></pre></td></tr></table></figure>
+<h4 id="在页面中使用">在页面中使用</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% qnimg imageFile <span class="string">attr1:</span>value1 <span class="string">attr2:</span>value2 <span class="string">'attr3:value31 value32 value3n'</span> [<span class="string">extend:</span>?imageView2/2/w/600 | normal:yes] %&#125;</span><br><span class="line">&#123;% qnjs jsFile <span class="string">attr1:</span>value1 <span class="string">attr2:</span>value2 <span class="string">'attr3:value31 value32 value3n'</span> %&#125;</span><br><span class="line">&#123;% qncss cssFile <span class="string">attr1:</span>value1 <span class="string">attr2:</span>value2 <span class="string">'attr3:value31 value32 value3n'</span> %&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg-w320" alt=""></p>
+<h4 id="图片测试">图片测试</h4><blockquote>
+<img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg-w200">
+</blockquote>
+<img alt="alt图片说明" title="titlelondon" src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg-w320">
+<h4 id="show_photo">show photo</h4><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg-w200" alt="Title说明" title="Alt说明"></p>
+<blockquote>
+<p><a href="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg" target="_blank" rel="external">http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg</a></p>
+</blockquote>
+<img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/london-bridge.jpg-w200">
+<h3 id="Markdown语法">Markdown语法</h3><h4 id="区块引用">区块引用</h4><p>demo:</p>
+<blockquote>
+<p>This is a blockquote</p>
+</blockquote>
+<p>code:</p>
+<blockquote>
+<p>This is a blockquote</p>
+</blockquote>
+<h4 id="强调">强调</h4><p>This is a list item with two <em>paragraphs.</em> Lorem ipsum dolor<br>    sit amet, <strong>consectetuer</strong> adipiscing elit. <em>Aliquam</em> hendrerit<br>    mi <strong>posuere lectus</strong>.</p>
+<p>下面换行</p>
+<hr>
+<h4 id="链接内容定义的形式为：">链接内容定义的形式为：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</span><br><span class="line">接着一个冒号</span><br><span class="line">接着一个以上的空格或制表符</span><br><span class="line">接着链接的网址</span><br><span class="line">选择性地接着 <span class="tag">title</span> 内容，可以用单引号、双引号或是括弧包着</span><br><span class="line">下面这三种链接的定义都是相同：</span><br><span class="line"></span><br><span class="line"><span class="attr_selector">[id]</span>: &lt;<span class="rule"><span class="attribute">http</span>:<span class="value">//example.com/&gt;  <span class="string">"Optional Title Here"</span></span></span></span><br></pre></td></tr></table></figure>
+<h4 id="真实的地球形状是这样的">真实的地球形状是这样的</h4><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/earth-round.gif" alt=""></p>
+<h4 id="图片链接">图片链接</h4><p>  <code></code></p>
+<pre><code>&gt; [![](<span class="symbol">http:</span>/<span class="regexp">/7xnift.com1.z0.glb.clouddn.com/img</span><span class="regexp">/2015/duola</span>-a-dream.jpg-w20<span class="number">0</span> <span class="string">"duolaDream"</span>)](<span class="symbol">http:</span>/<span class="regexp">/7xnift.com1.z0.glb.clouddn.com/img</span><span class="regexp">/2015/duola</span>-a-dream.jpg)
+</code></pre><p>  <code></code></p>
+<p>photo</p>
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/duola-a-dream.jpg-w200" alt=""></p>
+<p>change</p>
+<p><a href="http://7xnift.com1.z0.glb.clouddn.com/img/2015/duola-a-dream.jpg-w400" target="_blank" rel="external"><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/duola-a-dream.jpg-w200" alt="多啦A梦"></a></p>
+<p><a href="http://7xnift.com1.z0.glb.clouddn.com/img/2015/beijing-cbd.jpg" target="_blank" rel="external"><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/beijing-cbd.jpg" alt="BeijingCBD" title="北京CBD夜景"></a></p>
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/duola-a-dream.jpg-w280" alt="多啦A梦"></p>
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg-w320" alt="OpenSSL Team"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[Hexo 使用七牛云做图床并存储静态资源]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="七牛" scheme="http://yoursite.com/tags/%E4%B8%83%E7%89%9B/"/>
+    
+      <category term="tools" scheme="http://yoursite.com/categories/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[bitcoin-exchange]]></title>
+    <link href="http://yoursite.com/2014/01/15/bitcoin-exchange/"/>
+    <id>http://yoursite.com/2014/01/15/bitcoin-exchange/</id>
+    <published>2014-01-15T09:38:19.000Z</published>
+    <updated>2014-01-15T09:38:19.000Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+<img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png" alt="图片说明显示在图片下面" title="鼠标移动图片上的标题"></p>
+<h3 id="比特币交易所">比特币交易所</h3><blockquote>
+<p>高频交易</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[description]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[常用的Python库分类收集]]></title>
+    <link href="http://yoursite.com/2012/12/12/python-library/"/>
+    <id>http://yoursite.com/2012/12/12/python-library/</id>
+    <published>2012-12-12T14:28:10.000Z</published>
+    <updated>2015-10-19T06:04:54.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="常用的Python库分类收集">常用的Python库分类收集</h1><a id="more"></a>
+<h2 id="网络爬虫相关的">网络爬虫相关的</h2><h3 id="Requests">Requests</h3><p><img src="http://cn.python-requests.org/zh_CN/latest/_static/requests-sidebar.png" alt="pandas" title="pandas"></p>
+<p><a href="http://cn.python-requests.org/zh_CN/latest/" target="_blank" rel="external">http://cn.python-requests.org/zh_CN/latest/</a></p>
+<p>Requests 是使用 Apache2 Licensed 许可证的 HTTP 库。用 Python 编写，真正的为人类着想。</p>
+<p>Python 标准库中的 urllib2 模块提供了你所需要的大多数 HTTP 功能，但是它的 API 太渣了。它是为另一个时代、另一个互联网所创建的。它需要巨量的工作，甚至包括各种方法覆盖，来完成最简单的任务。</p>
+<h2 id="数据分析，数据挖掘相关的">数据分析，数据挖掘相关的</h2><h3 id="pandas">pandas</h3><p><img src="http://pandas.pydata.org/_static/pandas_logo.png" alt="pandas" title="pandas"></p>
+<p><a href="http://pandas.pydata.org/" target="_blank" rel="external">http://pandas.pydata.org/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[常用的Python库分类收集]]>
+    
+    </summary>
+    
+      <category term="library" scheme="http://yoursite.com/tags/library/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[git经验小提示]]></title>
+    <link href="http://yoursite.com/2012/11/12/git-tips/"/>
+    <id>http://yoursite.com/2012/11/12/git-tips/</id>
+    <published>2012-11-12T14:28:10.000Z</published>
+    <updated>2012-11-12T14:28:10.000Z</updated>
+    <content type="html"><![CDATA[<p>git的一些常用操作</p>
+<a id="more"></a>
+<h3 id="Git常用操作">Git常用操作</h3><h4 id="放弃本地修改，强制更新为线上版本">放弃本地修改，强制更新为线上版本</h4><blockquote>
+<p>git fetch –all<br>git reset –hard origin/master </p>
+</blockquote>
+<h3 id="Git_ssh_key_生成步骤">Git ssh key 生成步骤</h3><p>参考：<a href="http://git-scm.com/book/zh/ch4-3.html" target="_blank" rel="external">http://git-scm.com/book/zh/ch4-3.html</a></p>
+<h4 id="设置Git的user_name_和_email：">设置Git的user name 和 email：</h4><pre><code>git config --global user<span class="class">.name</span> <span class="string">"yourname"</span>
+git config --global user<span class="class">.email</span> <span class="string">"youremail"</span>
+</code></pre><h4 id="生成ssh密钥：">生成ssh密钥：</h4><pre><code>ssh-keygen -t rsa -<span class="keyword">C</span> <span class="string">"youremail"</span>
+</code></pre><p>连续按三次回车，密码为空<br>得到两个文件 id_rsa 和 id_rsa.pub, 一般存储在 ~/.ssh/ 目录下<br>其中id_rsa为私钥，妥善保管不要外泄，id_rsa.pub为公钥</p>
+<h4 id="查看刚刚生成的公钥">查看刚刚生成的公钥</h4><pre><code>cat ~<span class="regexp">/.ssh/id</span>_rsa.pub
+</code></pre><h3 id="git提交的时候文件名过长或者文件夹太深导致路径过长">git提交的时候文件名过长或者文件夹太深导致路径过长</h3><p>git pull aborted with error filename too long</p>
+<p>解决办法：</p>
+<pre><code><span class="title">git</span> config core.longpaths <span class="built_in">true</span>
+</code></pre><p>参考：<a href="http://stackoverflow.com/questions/21123415/git-pull-aborted-with-error-filename-too-long" target="_blank" rel="external">http://stackoverflow.com/questions/21123415/git-pull-aborted-with-error-filename-too-long</a></p>
+<h3 id="当出现_modified_content_in_submodules_时的解决办法">当出现 modified content in submodules 时的解决办法</h3><p>git 提交出现以下提示：</p>
+<pre><code>$ git status
+<span class="keyword">On</span> branch develop
+Your branch <span class="keyword">is</span> up-<span class="keyword">to</span>-date <span class="keyword">with</span> <span class="attribute">'origin</span>/develop'.
+Changes <span class="keyword">not</span> staged <span class="keyword">for</span> commit:
+  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> update what will be committed)
+  (<span class="keyword">use</span> <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard changes <span class="keyword">in</span> working directory)
+  (commit <span class="keyword">or</span> discard the untracked <span class="keyword">or</span> modified content <span class="keyword">in</span> submodules)
+
+        modified:   themes/<span class="keyword">next</span> (modified content)
+</code></pre><p>解决办法，新建 –.gitmodules–文件</p>
+<pre><code>echo <span class="string">""</span> <span class="prompt">&gt;&gt; </span>.gitmodules
+</code></pre><p>在新建的.gitmodules文件内写入：</p>
+<pre><code>[submodule <span class="string">"themes/next"</span>]
+    path = themes/<span class="keyword">next</span>
+    url = gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span>.git
+    ignore = dirty
+</code></pre><p>提示：url为子模块的git地址</p>
+<p>参考：<a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules" target="_blank" rel="external">http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[git经验小提示]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="tools" scheme="http://yoursite.com/categories/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[markdown]]></title>
+    <link href="http://yoursite.com/2012/10/15/markdown/"/>
+    <id>http://yoursite.com/2012/10/15/markdown/</id>
+    <published>2012-10-15T09:01:15.000Z</published>
+    <updated>2012-10-15T09:01:15.000Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+<img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png" alt="图片说明显示在图片下面" title="鼠标移动图片上的标题"></p>
+<!-- more -->
+<h3 id="Markdown语法">Markdown语法</h3><h4 id="表格">表格</h4><p>表格是非常有用的，例子如下：</p>
+<p>代码：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Tables        </span>|<span class="string"> Are           </span>|<span class="string"> Cool  </span>|</span><br><span class="line">|<span class="string"> ------------- </span>|<span class="string">:-------------:</span>|<span class="string"> -----:</span>|</span><br><span class="line">|<span class="string"> col 3 is      </span>|<span class="string"> right-aligned </span>|<span class="string"> $1600 </span>|</span><br><span class="line">|<span class="string"> col 2 is      </span>|<span class="string"> centered      </span>|<span class="string">   $12 </span>|</span><br><span class="line">|<span class="string"> zebra stripes </span>|<span class="string"> are neat      </span>|<span class="string">    $1 </span>|</span><br></pre></td></tr></table></figure></p>
+<p>这种语法生成的表格如下：</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="引用">引用</h4><p>如果你需要引用一小段别处的句子，那么就要用引用的格式。</p>
+<blockquote>
+<p>例如这样</p>
+</blockquote>
+<img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
+<p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png" alt="图片说明显示在图片下面" title="鼠标移动图片上的标题"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[description]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[javascript]]></title>
+    <link href="http://yoursite.com/2012/10/12/javascript/"/>
+    <id>http://yoursite.com/2012/10/12/javascript/</id>
+    <published>2012-10-12T07:11:10.000Z</published>
+    <updated>2012-12-25T07:22:33.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Apache_Thrift_-_可伸缩的跨语言服务开发框架">Apache Thrift - 可伸缩的跨语言服务开发框架</h1><p>Apache Thrift 是 Facebook 实现的一种高效的、支持多种编程语言的远程服务调用的框架。本文将从 Java 开发人员角度详细介绍 Apache Thrift 的架构、开发和部署，并且针对不同的传输协议和服务类型给出相应的 Java 实例，同时详细介绍 Thrift 异步客户端的实现，最后提出使用 Thrift 需要注意的事项。</p>
+<a id="more"></a>
+<h2 id="前言：">前言：</h2><p>目前流行的服务调用方式有很多种，例如基于 SOAP 消息格式的 Web Service，基于 JSON 消息格式的 RESTful 服务等。其中所用到的数据传输方式包括 XML，JSON 等，然而 XML 相对体积太大，传输效率低，JSON 体积较小，新颖，但还不够完善。本文将介绍由 Facebook 开发的远程服务调用框架 Apache Thrift，它采用接口描述语言定义并创建服务，支持可扩展的跨语言服务开发，所包含的代码生成引擎可以在多种语言中，如 C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, Smalltalk 等创建高效的、无缝的服务，其传输数据采用二进制格式，相对 XML 和 JSON 体积更小，对于高并发、大数据量和多语言的环境更有优势。本文将详细介绍 Thrift 的使用，并且提供丰富的实例代码加以解释说明，帮助使用者快速构建服务。</p>
+<h3 id="一个简单的_Thrift_实例">一个简单的 Thrift 实例</h3><p>本文首先介绍一个简单的 Thrift 实现实例，使读者能够快速直观地了解什么是 Thrift 以及如何使用 Thrift 构建服务。<br>创建一个简单的服务 Hello。首先根据 Thrift 的语法规范编写脚本文件 Hello.thrift，代码如下：<br>清单 1. Hello.thrift</p>
+<figure class="highlight thrift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> java <span class="class"><span class="keyword">service</span>.<span class="title">demo</span> </span><br><span class="line">service Hello</span>&#123; </span><br><span class="line"> <span class="built_in">string</span> helloString(<span class="number">1</span>:<span class="built_in">string</span> para) </span><br><span class="line"> <span class="built_in">i32</span> helloInt(<span class="number">1</span>:<span class="built_in">i32</span> para) </span><br><span class="line"> <span class="built_in">bool</span> helloBoolean(<span class="number">1</span>:<span class="built_in">bool</span> para) </span><br><span class="line"> <span class="keyword">void</span> helloVoid() </span><br><span class="line"> <span class="built_in">string</span> helloNull() </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="javascript">javascript</h1><p>1 javascript javascript javascript</p>
+<h2 id="javascript-1">javascript</h2><p>2 javascript javascript javascript</p>
+<h3 id="javascript-2">javascript</h3><p>3 javascript javascript javascript</p>
+<h4 id="javascript-3">javascript</h4><p>4 javascript javascript javascript</p>
+<h5 id="javascript-4">javascript</h5><p>5 javascript javascript javascript</p>
+<h6 id="javascript-5">javascript</h6><p>6 javascript javascript javascript</p>
+<p>####### javascript<br>7 javascript javascript javascript</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[你好，你了解一个英雄孤独的内心吗？]]>
+    
+    </summary>
+    
+      <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+      <category term="grunt" scheme="http://yoursite.com/tags/grunt/"/>
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+      <category term="nodejs" scheme="http://yoursite.com/categories/javascript/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2012/10/10/hello-world/"/>
+    <id>http://yoursite.com/2012/10/10/hello-world/</id>
+    <published>2012-10-10T07:01:02.000Z</published>
+    <updated>2015-10-19T06:04:54.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="七牛图片">七牛图片</h2><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg-w400" alt=""></p>
+<a id="more"></a>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="插入七牛图片">插入七牛图片</h3><p><img src="http://7xnift.com1.z0.glb.clouddn.com/img/2015/openssl.jpg" alt="open ssl"></p>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="多部署">多部署</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	message: update  #<span class="id">#git</span> message建议默认字段update 可以自定义</span><br><span class="line">	repo:</span><br><span class="line">	gitcafe: &lt;repository url&gt;,[branch] #<span class="id">#gitcafe</span> 仓库地址和分支</span><br><span class="line">	github: &lt;repository url&gt;,[branch] #<span class="id">#github</span> 仓库地址和分支</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	messgae: <span class="string">"update"</span></span><br><span class="line">	repo:</span><br><span class="line">		github: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>  master</span><br><span class="line">		gitcafe: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span>   gitcafe-pages</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line"><span class="id">#messgae</span>: <span class="string">"update"</span></span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line">repository: git@github<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.github</span><span class="class">.io</span><span class="class">.git</span></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@gitcafe<span class="class">.com</span>:<span class="number">31526</span>/<span class="number">31526</span><span class="class">.git</span></span><br><span class="line">branch: gitcafe-pages</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[常用的markdown语法]]>
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="md" scheme="http://yoursite.com/tags/md/"/>
+    
+      <category term="default" scheme="http://yoursite.com/categories/default/"/>
+    
+  </entry>
+  
+</feed>
