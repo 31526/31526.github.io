@@ -22,10 +22,14 @@
     <updated>2015-11-17T09:38:19.000Z</updated>
     <content type="html"><![CDATA[<a id="more"></a>
 <h3 id="Mysql的安装和配置">Mysql的安装和配置</h3><pre><code><span class="keyword">brew </span>install mysql
-</code></pre><p>等安装成功后，启动mysql<br>    mysql.server start</p>
-<p>登录mysql，新安装得mysql是没有密码的<br>    mysql -uroot -p</p>
-<p>设置Mac开机自动启动，执行一下命令:(其中5.7.9是我的mysql版本号)<br>    cp /usr/local/Cellar/mysql/5.7.9/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents</p>
-<pre><code><span class="comment">// 继续执行</span>
+</code></pre><p>等安装成功后，启动mysql</p>
+<pre><code>mysql<span class="class">.server</span> start
+</code></pre><p>登录mysql，新安装得mysql是没有密码的</p>
+<pre><code><span class="title">mysql</span> -uroot -p
+</code></pre><p>设置Mac开机自动启动，执行一下命令:(其中5.7.9是我的mysql版本号)</p>
+<pre><code>cp /usr/local/Cellar/mysql/<span class="number">5.7</span>.<span class="number">9</span>/homebrew<span class="class">.mxcl</span><span class="class">.mysql</span><span class="class">.plist</span> ~/Library/LaunchAgents
+
+<span class="comment">// 继续执行</span>
 launchctl load -w ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span><span class="class">.mysql</span><span class="class">.plist</span>    
 </code></pre><p>至此，mysql随机启动就设置完成了。</p>
 <img alt="图片说明显示在图片下面" title="鼠标移动图片上的标题" src="http://7xnift.com1.z0.glb.clouddn.com/img/xxxxxxx.png-w200">
